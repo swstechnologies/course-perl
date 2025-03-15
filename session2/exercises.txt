@@ -1,0 +1,30 @@
+# Perl Session 2 Exercises
+
+## Exercise 1: Scalars and Arrays
+1. Create a scalar variable to store your name and print it.
+2. Create an array of your favorite fruits and print each fruit using a loop.
+
+## Exercise 2: Hashes
+1. Create a hash to store the names and ages of three people. Print each person's name and age.
+
+## Exercise 3: Subroutines
+1. Write a subroutine that takes two numbers as arguments and returns their sum. Call the subroutine and print the result.
+2. Write a subroutine that takes a string as an argument and returns the string in reverse. Call the subroutine and print the result.
+
+## Exercise 4: String Functions
+1. Create a string variable with the value "Hello, World!". Use a string function to find the length of the string and print it.
+2. Create a string variable with the value "Perl Programming". Use a string function to convert the string to uppercase and print it.
+3. Create a string variable with the value "  Trim me  ". Use a string function to remove the leading and trailing whitespace and print the result.
+
+## Exercise 5: Array Functions
+1. Create an array with the values (3, 1, 4, 1, 5, 9). Use an array function to sort the array in ascending order and print the result.
+2. Create an array with the values ("apple", "banana", "cherry"). Use an array function to add "date" to the end of the array and print the result.
+3. Create an array with the values ("red", "green", "blue"). Use an array function to remove the first element of the array and print the result.
+
+## Exercise 6: Hash Functions
+1. Create a hash with the keys "apple", "banana", and "cherry" and their corresponding values "red", "yellow", and "red". Use a hash function to get a list of all the keys and print them.
+2. Create a hash with the keys "cat", "dog", and "bird" and their corresponding values "meow", "bark", and "tweet". Use a hash function to check if the key "dog" exists in the hash and print the result.
+3. Create a hash with the keys "name", "age", and "city" and their corresponding values "Alice", 30, and "New York". Use a hash function to delete the key "age" and print the resulting hash.
+
+# End of Exercises
+

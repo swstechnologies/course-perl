@@ -78,6 +78,19 @@ sub demo_symlink {
     unlink $symlink;
     unlink $file;
 }
+# Subroutine to demonstrate rename
+sub demo_rename {
+    my $old_name = "old_name.txt";
+    my $new_name = "new_name.txt";
+
+    open my $fh, '>', $old_name or die "Cannot create file: $!";
+    close $fh;
+
+    rename($old_name, $new_name) or die "Cannot rename file: $!";
+    print "File renamed from $old_name to $new_name\n";
+
+    unlink $new_name;
+}
 
 # Main program
 sub main {
@@ -95,6 +108,9 @@ sub main {
 
     print "\nDemonstrating symlink:\n";
     demo_symlink();
+
+    print "\nDemonstrating rename:\n";
+    demo_rename();
 }
 
 main();

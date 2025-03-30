@@ -1,0 +1,74 @@
+# Sample server.log
+2025-03-30 10:15:20 INFO User login successful: user1
+2025-03-30 10:16:45 ERROR Failed to connect to database
+2025-03-30 10:17:05 INFO Data processing started
+2025-03-30 10:18:12 ERROR Network timeout while accessing API
+2025-03-30 10:19:34 INFO Backup completed successfully
+2025-03-30 10:20:55 ERROR Disk space low on /var/log
+2025-03-30 10:21:40 INFO User logout successful: user1
+2025-03-30 10:22:10 INFO User login successful: user2
+2025-03-30 10:23:05 ERROR Authentication failed for user3
+2025-03-30 10:24:30 INFO System maintenance started
+2025-03-30 10:25:00 ERROR Failed to fetch configuration
+2025-03-30 10:26:15 INFO Database backup initiated
+2025-03-30 10:27:40 ERROR Unable to reach remote server
+2025-03-30 10:28:55 INFO Scheduled task executed
+2025-03-30 10:29:30 ERROR Insufficient permissions
+2025-03-30 10:30:40 INFO User login successful: user3
+2025-03-30 10:31:15 ERROR Service unavailable
+2025-03-30 10:32:20 INFO Backup completed successfully
+2025-03-30 10:33:55 ERROR Disk quota exceeded
+2025-03-30 10:34:30 INFO User logout successful: user3
+2025-03-30 10:35:45 INFO New user registration: user4
+2025-03-30 10:36:20 ERROR Failed to connect to database
+2025-03-30 10:37:00 INFO Data synchronization started
+2025-03-30 10:38:10 ERROR Network timeout while accessing API
+2025-03-30 10:39:50 INFO Backup completed successfully
+2025-03-30 10:40:30 ERROR Disk space low on /var/log
+2025-03-30 10:41:10 INFO User login successful: user5
+2025-03-30 10:42:15 ERROR Invalid credentials
+2025-03-30 10:43:05 INFO System maintenance started
+2025-03-30 10:44:00 ERROR Configuration error detected
+2025-03-30 10:45:25 INFO Database backup initiated
+2025-03-30 10:46:50 ERROR Remote server unreachable
+2025-03-30 10:47:55 INFO Scheduled task executed
+2025-03-30 10:48:40 ERROR Access denied
+2025-03-30 10:49:10 INFO User login successful: user6
+2025-03-30 10:50:25 ERROR Service timeout
+2025-03-30 10:51:45 INFO Backup completed successfully
+2025-03-30 10:52:30 ERROR Disk space critically low
+2025-03-30 10:53:20 INFO User logout successful: user6
+2025-03-30 10:54:35 INFO New user registration: user7
+2025-03-30 10:55:10 ERROR Failed to connect to database
+2025-03-30 10:56:45 INFO Data processing started
+2025-03-30 10:57:30 ERROR Network timeout
+2025-03-30 10:58:20 INFO Backup completed successfully
+2025-03-30 10:59:00 ERROR Disk space low on /var/log
+2025-03-30 11:00:15 INFO User login successful: user8
+2025-03-30 11:01:05 ERROR Authentication failed
+2025-03-30 11:02:20 INFO System maintenance started
+2025-03-30 11:03:40 ERROR Failed to fetch configuration
+2025-03-30 11:04:55 INFO Database backup initiated
+2025-03-30 11:05:30 ERROR Unable to reach remote server
+2025-03-30 11:06:40 INFO Scheduled task executed
+2025-03-30 11:07:20 ERROR Insufficient permissions
+2025-03-30 11:08:45 INFO User login successful: user9
+2025-03-30 11:09:30 ERROR Service unavailable
+2025-03-30 11:10:50 INFO Backup completed successfully
+2025-03-30 11:11:20 ERROR Disk quota exceeded
+2025-03-30 11:12:45 INFO User logout successful: user9
+2025-03-30 11:13:10 INFO New user registration: user10
+2025-03-30 11:14:25 ERROR Failed to connect to database
+2025-03-30 11:15:00 INFO Data synchronization started
+2025-03-30 11:16:45 ERROR Network timeout
+2025-03-30 11:17:30 INFO Backup completed successfully
+2025-03-30 11:18:15 ERROR Disk space low on /var/log
+2025-03-30 11:19:10 INFO User login successful: user11
+2025-03-30 11:20:45 ERROR Invalid credentials
+2025-03-30 11:21:30 INFO System maintenance started
+2025-03-30 11:22:50 ERROR Configuration error detected
+2025-03-30 11:23:15 INFO Database backup initiated
+2025-03-30 11:24:55 ERROR Remote server unreachable
+2025-03-30 11:25:20 INFO Scheduled task executed
+2025-03-30 11:26:40 ERROR Access denied
+

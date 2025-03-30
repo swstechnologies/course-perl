@@ -1,0 +1,22 @@
+Exercise 1
+  - Read a text file containing logs "server.log"
+  - Use grep to extract lines containing the word "ERROR" and 
+  - Display the line number along with the error message
+  - Save these error lines into a new file "errors.log"
+
+Exercise 2
+  - Read file "server.log" containing random text
+  - Use a hash to store the frequency of each word (ignoring case)
+  - Print the top 5 most frequent words along with their counts
+  - Addon: Sort the output in descending order of frequency.
+
+Exercise 3
+  - Read a CSV file "employees.csv" with the format: Department, Name, Age, Role
+  - Store the data in a hash of arrays:
+	my %employees = (
+	    'IT' => [{ name => 'Srinivas', age => 30, role => "Cloud Admininstrator" }],
+	    'HR' => [{ name => 'Sarita', age => 25, role => "HR Executive" }],
+	);
+  - Print the employee details, grouped by department.
+  - Addon: Count number of employees for each role & department 
+

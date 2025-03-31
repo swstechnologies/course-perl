@@ -14,8 +14,9 @@ sub define_and_print_hash() {
     		);
     %second = (
     	"first" => "first_val",
-	"second" => 2.1,
-	"third" => 3
+	"second" => 2.345,
+	"third" => "anotherstring",
+	5 => "some string"
     		);
     %third = (
 	    # Can be string 
@@ -31,9 +32,9 @@ sub define_and_print_hash() {
     print("second:", \%second, "\n");
     print("third:", \%third, "\n");
 
-    print Dumper(\%first);
-    print Dumper(\%second);
-    print Dumper(\%third);
+    print(Dumper(\%first));
+    print(Dumper(\%second));
+    print(Dumper(\%third));
 }
 
 &define_and_print_hash();

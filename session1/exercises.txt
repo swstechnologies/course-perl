@@ -6,3 +6,4 @@
 6. Write a Perl program to find the largest and smallest elements in an array.
 7. Write a Perl program that defines a subroutine to check if a number is prime.
 8. Write a Perl program that takes an array of numbers as input and uses a subroutine to find the average.
+

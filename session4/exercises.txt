@@ -1,0 +1,22 @@
+# Simple Exercises
+1. Write a Perl script to check if a given string contains the word "Python" using `m//`.
+2. Replace all occurrences of "apple" with "orange" in a string using `s///`.
+3. Match a string that starts with "Start" and ends with "End" using `m//`.
+
+# Intermediate Exercises
+1. Write a script to extract all phone numbers in the format "(XXX) XXX-XXXX" from a given text using regex and `m//`.
+2. Replace all whitespace characters in a string with underscores using `s///`.
+3. Replace all punctuation marks in a string with spaces using `s///`.
+4. Use `tr///` to convert all uppercase letters in a string to lowercase.
+5. Match and extract all words that are exactly 5 characters long from a given text using `m//`.
+6. Write a script to extract all email addresses from a given text using regex and `m//`.
+7. Match and extract all words that start with a capital letter from a given text using `m//`.
+
+
+# Advanced Exercises
+1. Write a script to validate if a given string is a valid MAC address (e.g., "00:1A:2B:3C:4D:5E") using regex and `m//`.
+2. Replace all XML tags in a string with an empty string using `s///`.
+3. Match and extract all timestamps in the format "HH:MM:SS" from a given text using regex and `m//`.
+4. Replace all HTML tags in a string with an empty string using `s///`.
+5. Match and extract all dates in the format "DD/MM/YYYY" from a given text using regex and `m//`.
+6. Write a script to validate if a given string is a valid IPv4 address using regex and `m//`.

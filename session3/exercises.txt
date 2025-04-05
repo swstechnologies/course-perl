@@ -20,3 +20,14 @@ Exercise 3
   - Print the employee details, grouped by department.
   - Addon: Count number of employees for each role & department 
 
+Project Exercise:
+
+    Look at input file
+    (#1) Generate a HoH manually such that levels are like following
+	Process => Voltage => Temperature => Cell => { Type, Power, Delay}
+
+    Print it using Data::Dumper function
+
+(#2) Write a function that asks user for process / voltage / temperature / cell detail and provides Cell’s information based on that
+
+

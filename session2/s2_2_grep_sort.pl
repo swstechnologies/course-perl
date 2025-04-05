@@ -15,6 +15,9 @@ sub process_array {
     return @sorted;
 }
 
+if (@ARGV == 0) {
+    die "Usage: $0 <number1> <number2> ...\n";
+}
 # Read input from command line arguments
 my @input_array = @ARGV;
 
@@ -22,6 +25,3 @@ my @input_array = @ARGV;
 my @result = process_array(@input_array);
 
 print "Filtered and sorted array: @result\n";
-if (@ARGV == 0) {
-    die "Usage: $0 <number1> <number2> ...";
-}

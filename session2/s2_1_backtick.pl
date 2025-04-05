@@ -12,7 +12,7 @@ sub get_directory_contents {
 }
 
 if (@ARGV == 0) {
-    die "Usage: $0 <folder1> <folder2> ...";
+    die "Usage: $0 <folder1> <folder2> ...\n";
 }
 
 foreach my $dir (@ARGV) {

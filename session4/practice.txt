@@ -1,0 +1,309 @@
+# Basic Regex Patterns for Searching
+# These patterns are useful for teaching basic regex concepts.
+
+# Match a simple word
+my $pattern1 = qr/word/;
+
+# Match a digit
+my $pattern2 = qr/\d/;
+
+# Match a non-digit
+my $pattern3 = qr/\D/;
+
+# Match a whitespace character
+my $pattern4 = qr/\s/;
+
+# Match a non-whitespace character
+my $pattern5 = qr/\S/;
+
+# Match a word boundary
+my $pattern6 = qr/\bword\b/;
+
+my $pattern7 = qr/^start/;
+
+# Match the end of a string
+my $pattern8 = qr/end$/;
+
+# Match any single character
+my $pattern9 = qr/./;
+
+# Match a specific set of characters
+my $pattern10 = qr/[aeiou]/;
+
+# Match anything except a specific set of characters
+my $pattern11 = qr/[^aeiou]/;
+
+# Match a repeated character (zero or more times)
+my $pattern12 = qr/a*/;
+
+# Match a repeated character (one or more times)
+my $pattern13 = qr/a+/;
+
+# Match a repeated character (zero or one time)
+my $pattern14 = qr/a?/;
+
+# Match a specific number of repetitions
+my $pattern15 = qr/a{3}/;
+
+# Match a range of repetitions
+my $pattern16 = qr/a{2,5}/;
+
+# Match an optional group
+my $pattern17 = qr/(abc)?/;
+
+# Match an alternative group
+my $pattern18 = qr/(abc|def)/;
+
+# Match a non-capturing group
+my $pattern19 = qr/(?:abc)/;
+
+# Match a lookahead assertion
+my $pattern20 = qr/abc(?=def)/;
+
+# Match a negative lookahead assertion
+my $pattern21 = qr/abc(?!def)/;
+
+# Match a lookbehind assertion
+my $pattern22 = qr/(?<=abc)def/;
+
+# Match a negative lookbehind assertion
+my $pattern23 = qr/(?<!abc)def/;
+
+# Match a hexadecimal number
+my $pattern24 = qr/0x[0-9A-Fa-f]+/;
+
+# Match an email address
+my $pattern25 = qr/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
+
+# Match a URL
+my $pattern26 = qr/https?:\/\/[^\s]+/;
+
+# Match a phone number
+my $pattern27 = qr/\(\d{3}\) \d{3}-\d{4}/;
+
+# Match a date in YYYY-MM-DD format
+my $pattern28 = qr/\d{4}-\d{2}-\d{2}/;
+
+# Match a time in HH:MM:SS format
+my $pattern29 = qr/\d{2}:\d{2}:\d{2}/;
+
+# Match a floating-point number
+my $pattern30 = qr/\d+\.\d+/;
+
+# Match a negative number
+my $pattern31 = qr/-\d+/;
+
+# Match a positive number
+my $pattern32 = qr/\+?\d+/;
+
+# Match a file path
+my $pattern33 = qr/[a-zA-Z0-9\/_.-]+/;
+
+# Match a Windows file path
+my $pattern34 = qr/[a-zA-Z]:\\[a-zA-Z0-9\\_.-]+/;
+
+# Match a credit card number
+my $pattern35 = qr/\d{4}-\d{4}-\d{4}-\d{4}/;
+
+# Match a social security number
+my $pattern36 = qr/\d{3}-\d{2}-\d{4}/;
+
+# Match a word with mixed case
+my $pattern37 = qr/[a-zA-Z]+/;
+
+# Match a word with only uppercase letters
+my $pattern38 = qr/[A-Z]+/;
+
+# Match a word with only lowercase letters
+my $pattern39 = qr/[a-z]+/;
+
+# Match a string with special characters
+my $pattern40 = qr/[!@#$%^&*()_+]/;
+
+# Match a string with escaped characters
+my $pattern41 = qr/\\n|\\t|\\r/;
+
+# Match a string with a specific prefix
+my $pattern42 = qr/^prefix/;
+
+# Match a string with a specific suffix
+my $pattern43 = qr/suffix$/;
+
+# Match a string with a specific substring
+my $pattern44 = qr/substring/;
+
+# Match a string with a specific length
+my $pattern45 = qr/^.{10}$/;
+
+# Match a string with a specific pattern
+my $pattern46 = qr/^[a-zA-Z0-9]+$/;
+
+# Match a string with a specific character set
+my $pattern47 = qr/^[a-zA-Z]+$/;
+
+# Match a string with a specific numeric range
+my $pattern48 = qr/^[0-9]{1,3}$/;
+
+# Match a string with a specific alphanumeric range
+my $pattern49 = qr/^[a-zA-Z0-9]{1,10}$/;
+
+# Match a string with a specific special character range
+my $pattern50 = qr/^[!@#$%^&*()_+]{1,5}$/;
+
+
+
+
+===========
+# Advanced Regex Patterns for Search & Replace
+# These patterns are useful for teaching advanced regex concepts.
+
+# Replace a word with another word
+my $replace1 =~ s/word/replacement/;
+
+# Replace a digit with a word
+my $replace2 =~ s/\d/number/;
+
+# Replace a non-digit with a word
+my $replace3 =~ s/\D/non-digit/;
+
+# Replace a whitespace character with a space
+my $replace4 =~ s/\s/ /;
+
+# Replace a non-whitespace character with a dash
+my $replace5 =~ s/\S/-/;
+
+# Replace a word boundary with a marker
+my $replace6 =~ s/\b/|/;
+
+# Replace the start of a string with a prefix
+my $replace7 =~ s/^/prefix-/;
+
+# Replace the end of a string with a suffix
+my $replace8 =~ s/$/-suffix/;
+
+# Replace any single character with a star
+my $replace9 =~ s/./*/;
+
+# Replace a specific set of characters with a placeholder
+my $replace10 =~ s/[aeiou]/_/g;
+
+# Replace anything except a specific set of characters with a hash
+my $replace11 =~ s/[^aeiou]/#/g;
+
+# Replace a repeated character with a single instance
+my $replace12 =~ s/(.)\1+/$1/g;
+
+# Replace a specific number of repetitions with a marker
+my $replace13 =~ s/(a{3})/[$1]/g;
+
+# Replace a range of repetitions with a marker
+my $replace14 =~ s/(a{2,5})/[$1]/g;
+
+# Replace an optional group with a marker
+my $replace15 =~ s/(abc)?/[optional]/g;
+
+# Replace an alternative group with a marker
+my $replace16 =~ s/(abc|def)/[alternative]/g;
+
+# Replace a non-capturing group with a marker
+my $replace17 =~ s/(?:abc)/[non-capturing]/g;
+
+# Replace a lookahead assertion with a marker
+my $replace18 =~ s/abc(?=def)/[lookahead]/g;
+
+# Replace a negative lookahead assertion with a marker
+my $replace19 =~ s/abc(?!def)/[negative-lookahead]/g;
+
+# Replace a lookbehind assertion with a marker
+my $replace20 =~ s/(?<=abc)def/[lookbehind]/g;
+
+# Replace a negative lookbehind assertion with a marker
+my $replace21 =~ s/(?<!abc)def/[negative-lookbehind]/g;
+
+# Replace a hexadecimal number with a marker
+my $replace22 =~ s/0x[0-9A-Fa-f]+/[hex]/g;
+
+# Replace an email address with a marker
+my $replace23 =~ s/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/[email]/g;
+
+# Replace a URL with a marker
+my $replace24 =~ s/https?:\/\/[^\s]+/[url]/g;
+
+# Replace a phone number with a marker
+my $replace25 =~ s/\(\d{3}\) \d{3}-\d{4}/[phone]/g;
+
+# Replace a date in YYYY-MM-DD format with a marker
+my $replace26 =~ s/\d{4}-\d{2}-\d{2}/[date]/g;
+
+# Replace a time in HH:MM:SS format with a marker
+my $replace27 =~ s/\d{2}:\d{2}:\d{2}/[time]/g;
+
+# Replace a floating-point number with a marker
+my $replace28 =~ s/\d+\.\d+/[float]/g;
+
+# Replace a negative number with a marker
+my $replace29 =~ s/-\d+/[negative]/g;
+
+# Replace a positive number with a marker
+my $replace30 =~ s/\+?\d+/[positive]/g;
+
+# Replace a file path with a marker
+my $replace31 =~ s/[a-zA-Z0-9\/_.-]+/[path]/g;
+
+# Replace a Windows file path with a marker
+my $replace32 =~ s/[a-zA-Z]:\\[a-zA-Z0-9\\_.-]+/[windows-path]/g;
+
+# Replace a credit card number with a marker
+my $replace33 =~ s/\d{4}-\d{4}-\d{4}-\d{4}/[credit-card]/g;
+
+# Replace a social security number with a marker
+my $replace34 =~ s/\d{3}-\d{2}-\d{4}/[ssn]/g;
+
+# Replace a word with mixed case with a marker
+my $replace35 =~ s/[a-zA-Z]+/[mixed-case]/g;
+
+# Replace a word with only uppercase letters with a marker
+my $replace36 =~ s/[A-Z]+/[uppercase]/g;
+
+# Replace a word with only lowercase letters with a marker
+my $replace37 =~ s/[a-z]+/[lowercase]/g;
+
+# Replace a string with special characters with a marker
+my $replace38 =~ s/[!@#$%^&*()_+]/[special]/g;
+
+# Replace a string with escaped characters with a marker
+my $replace39 =~ s/\\n|\\t|\\r/[escaped]/g;
+
+# Replace a string with a specific prefix with a marker
+my $replace40 =~ s/^prefix/[prefix]/g;
+
+# Replace a string with a specific suffix with a marker
+my $replace41 =~ s/suffix$/[suffix]/g;
+
+# Replace a string with a specific substring with a marker
+my $replace42 =~ s/substring/[substring]/g;
+
+# Replace a string with a specific length with a marker
+my $replace43 =~ s/^.{10}$/[length-10]/g;
+
+# Replace a string with a specific pattern with a marker
+my $replace44 =~ s/^[a-zA-Z0-9]+$/[pattern]/g;
+
+# Replace a string with a specific character set with a marker
+my $replace45 =~ s/^[a-zA-Z]+$/[char-set]/g;
+
+# Replace a string with a specific numeric range with a marker
+my $replace46 =~ s/^[0-9]{1,3}$/[numeric-range]/g;
+
+# Replace a string with a specific alphanumeric range with a marker
+my $replace47 =~ s/^[a-zA-Z0-9]{1,10}$/[alphanumeric-range]/g;
+
+# Replace a string with a specific special character range with a marker
+my $replace48 =~ s/^[!@#$%^&*()_+]{1,5}$/[special-range]/g;
+
+# Replace a string with a specific pattern and group with a marker
+my $replace49 =~ s/(pattern)/[group-$1]/g;
+
+# Replace a string with a specific pattern and multiple groups with a marker
+my $replace50 =~ s/(pattern1)(pattern2)/[group1-$1-group2-$2]/g;
+

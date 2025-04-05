@@ -20,3 +20,11 @@
 4. Replace all HTML tags in a string with an empty string using `s///`.
 5. Match and extract all dates in the format "DD/MM/YYYY" from a given text using regex and `m//`.
 6. Write a script to validate if a given string is a valid IPv4 address using regex and `m//`.
+
+Project Related
+
+
+Parse Nginx / Apache logs and output CSV format
+From: 127.0.0.1 - - [05/Apr/2025:06:25:24 +0000] "GET /index.html HTTP/1.1" 200 4521
+To: 127.0.0.1, 05/Apr/2025, GET /index.html, 200
+

@@ -5,10 +5,8 @@ use Data::Dumper;
 
 # Main program
 my $groups_to_process = ['po', 'ws'];
-# my $group_file = '/etc/group';
-# my $passwd_file = '/etc/passwd';
-my $group_file = 'group';
-my $passwd_file = 'passwd';
+my $group_file = '/etc/group';
+my $passwd_file = '/etc/passwd';
 
 my $data_structure = build_structure($group_file, $passwd_file, $groups_to_process);
 print_structure($data_structure);
@@ -43,8 +41,12 @@ sub build_structure {
         chomp;
         my ($username, $x, $uid, $gid, $desc, $home, $shell) = split /:/;
         # Extract User Full Name
-        my $user_full_name = $desc;
-        $user_full_name =~ s/^\s+|,|\s+$//g;  # Trim leading and trailing whitespace or commas  
+        my $user_full_name ;
+        if ($desc) {
+            $user_full_name = $desc ;
+            $user_full_name =~ s/,.*//  if ($user_full_name =~ /,/); # Remove everything after the first comma
+            $user_full_name =~ s/^\s+|\s+$//g;  # Trim leading and trailing whitespace
+        }
         $user_info{$username} = {
             name => $user_full_name,
             uid   => $uid,

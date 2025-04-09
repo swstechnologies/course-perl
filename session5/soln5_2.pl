@@ -5,8 +5,10 @@ use Data::Dumper;
 
 # Main program
 my $groups_to_process = ['po', 'ws'];
-my $group_file = '/etc/group';
-my $passwd_file = '/etc/passwd';
+# my $group_file = '/etc/group';
+# my $passwd_file = '/etc/passwd';
+my $group_file = 'group';
+my $passwd_file = 'passwd';
 
 my $data_structure = build_structure($group_file, $passwd_file, $groups_to_process);
 print_structure($data_structure);
@@ -18,6 +20,9 @@ sub build_structure {
 
     # Read group file and filter relevant groups
     open my $group_fh, '<', $group_file or die "Cannot open $group_file: $!";
+    # This script initializes a hash named %group_info.
+    # The hash is intended to store information about groups.
+    # Further details about its usage and structure should be defined in the script.
     my %group_info;
     while (<$group_fh>) {
         chomp;
@@ -37,7 +42,11 @@ sub build_structure {
     while (<$passwd_fh>) {
         chomp;
         my ($username, $x, $uid, $gid, $desc, $home, $shell) = split /:/;
+        # Extract User Full Name
+        my $user_full_name = $desc;
+        $user_full_name =~ s/^\s+|,|\s+$//g;  # Trim leading and trailing whitespace or commas  
         $user_info{$username} = {
+            name => $user_full_name,
             uid   => $uid,
             gid   => $gid,
             home  => $home,
@@ -47,17 +56,55 @@ sub build_structure {
     close $passwd_fh;
 
     # Build the main data structure
+    # Iterate through each group in the group_info hash
     foreach my $group_name (keys %group_info) {
         my $group_id = $group_info{$group_name}{group_id};
+        my %processed_users;
+
+        # Add users explicitly listed in the group
         foreach my $member (@{$group_info{$group_name}{members}}) {
             if (exists $user_info{$member}) {
                 my $user = $user_info{$member};
                 $group_users{$group_name}{$member} = [
                     $member, $user->{home}, $user->{shell}, $member, $user->{uid}, $user->{gid}
                 ];
+                $processed_users{$member} = 1;
+            }
+        }
+
+        # Add users whose primary group matches the group ID
+        foreach my $username (keys %user_info) {
+            my $user = $user_info{$username};
+            if ($user->{gid} == $group_id && !$processed_users{$username}) {
+                $group_users{$group_name}{$username} = [
+                    $user->{name}, $user->{home}, $user->{shell}, $username, $user->{uid}, $user->{gid}
+                ];
+            }
+            # Also update group_info members to include users with the same GID
+            if ($user->{gid} == $group_id) {
+                push @{$group_info{$group_name}{members}}, $username unless grep { $_ eq $username } @{$group_info{$group_name}{members}};
             }
         }
     }
+
+    # Cleanup all users that are not part of the target groups
+    foreach my $userid (keys %user_info) {
+        my $user = $user_info{$userid};
+        my $found = 0;
+        foreach my $group_name (keys %group_users) {
+            if (exists $group_users{$group_name}{$userid}) {
+                $found = 1;
+                last;
+            }
+        }
+        if (!$found) {
+            delete $user_info{$userid};
+        }
+    }
+
+    # print "Group Info: ", Dumper(\%group_info);
+    # print "User Info: ", Dumper(\%user_info);
+    # print "Group Users: ", Dumper(\%group_users);
 
     return \%group_users;
 }

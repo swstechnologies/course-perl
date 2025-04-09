@@ -17,7 +17,7 @@ sub calculate_average {
 # Check if numbers are provided on the command line
 if (@ARGV) {
     my $average = calculate_average(@ARGV);
-    print "The average is: $average\n";
+    print "The average delay is: $average\n";
 } else {
-    print "Please provide floating point numbers as arguments.\n";
+    print "Please provide delay with valid floating point numbers as arguments.\n";
 }

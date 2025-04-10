@@ -4,7 +4,7 @@ use warnings;
 
 # Subroutine to demonstrate global matching
 sub global_match {
-    my $string = "cat bat rat mat";
+    my $string = "sit lit wolf set put";
     my @matches = $string =~ m/\b\w{3}\b/g;
     print "Global matches: ", join(", ", @matches), "\n";
 }

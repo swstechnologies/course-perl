@@ -10,14 +10,14 @@ sub demo_log_parsing() {
 sub demo_camelcase_parsing() {
     my $text = "ThisIsCamelCase and this_is_not";
     while ($text =~ /\b[A-Z][a-z]+(?:[A-Z][a-z]+)+\b/g) {
-    	print "CamelCase: $&\n";
+        print "CamelCase: $& \n";
     }
 }
 
 sub validate_ip_address() {
     my $ip = "Connect to 192.168.1.100 now";
     if ($ip =~ /\b\d{1,3}(?:\.\d{1,3}){3}\b/) {
-	    print "IP Detected: $&\n";
+	    print "IP Detected: $& \n";
     }
 }
 
@@ -27,7 +27,7 @@ sub demo_reusable_patterns() {
     my $log = "Backup done on 2025-04-05";
 
     if ($log =~ /$pattern/) {
-    	print "Date: $&\n";
+        print "Date: $& \n";
     }
 }
 

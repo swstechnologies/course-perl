@@ -27,7 +27,7 @@ sub demo_extract_config() {
     my @numbers = ($config =~ /(\d+)/g);
     print "Numbers: @numbers\n";
 
-    %config = ();
+    my %config = ();
     while( $config =~ /(\w+)=(\d+\w*)/g ) {
     	$config{$1} = $2 ;
     }

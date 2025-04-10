@@ -23,8 +23,6 @@ sub extract_sections {
         # Clean up line for processing
         # Check pattern and update detail
 
-        # Found Design Detail
-
         # Found Section detail
         # Update section Tracking variable
 

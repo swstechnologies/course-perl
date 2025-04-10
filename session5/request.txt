@@ -1,0 +1,1 @@
+1) Demo for select() on STDOUT and file handle

@@ -1,0 +1,17 @@
+
+# Exercises
+
+# Work on exercises given in this folder 1 - 3
+
+
+Write function for contents extraction
+    - Raw Contents
+        - Capture file contents line in array
+        - Dump the array
+    - Extract Design Summary (Name / version)
+    - Extract Process Lines
+        - Use Match to extract process lines
+    - Extract Cell Lines
+        - Think of ways to identify Cell Lines
+
+

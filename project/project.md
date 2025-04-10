@@ -73,7 +73,6 @@ U4     |  INV    |  0.48   |  0.10
 ✅ Sorting & Data Processing – Dynamic sorting & querying
 
 
-
 ## Session 3
 ✅ File Handling & Parsing – Handling multiple tables in a single file  
 ✅ User Input Handling – Interactive CLI with real-time querying
@@ -112,6 +111,15 @@ Write a program that arranges data content retrieved in following format
     }
     );
 </pre>
+
+    - Raw Contents
+        - Capture file contents line in array
+        - Dump the array
+    - Extract Design Summary (Name / version)
+    - Extract Process Lines
+        - Use Match to extract process lines
+    - Extract Cell Lines
+        - Think of ways to identify Cell Lines
 
 
 
